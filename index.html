@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Management System - デモ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <!-- ヘッダー -->
+    <header class="bg-white shadow">
+        <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-900">🚀 Project Management System</h1>
+            <div class="flex items-center gap-4">
+                <span class="text-sm text-gray-700">デモユーザー</span>
+                <button class="px-4 py-2 bg-gray-200 text-gray-900 hover:bg-gray-300 rounded-md text-sm">ログアウト</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        <div class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-900">ダッシュボード</h2>
+            <p class="mt-2 text-gray-600">案件の概要を確認できます</p>
+        </div>
+
+        <!-- 統計カード -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-8">
+            <div class="bg-white rounded-lg shadow-md p-6 bg-blue-50 border-l-4 border-blue-500">
+                <p class="text-sm text-gray-600">合計</p>
+                <p class="text-3xl font-bold text-blue-700">12</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 bg-yellow-50 border-l-4 border-yellow-500">
+                <p class="text-sm text-gray-600">計画中</p>
+                <p class="text-3xl font-bold text-yellow-700">3</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 bg-green-50 border-l-4 border-green-500">
+                <p class="text-sm text-gray-600">進行中</p>
+                <p class="text-3xl font-bold text-green-700">5</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 bg-purple-50 border-l-4 border-purple-500">
+                <p class="text-sm text-gray-600">完了</p>
+                <p class="text-3xl font-bold text-purple-700">3</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 bg-orange-50 border-l-4 border-orange-500">
+                <p class="text-sm text-gray-600">保留中</p>
+                <p class="text-3xl font-bold text-orange-700">1</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 bg-red-50 border-l-4 border-red-500">
+                <p class="text-sm text-gray-600">キャンセル</p>
+                <p class="text-3xl font-bold text-red-700">0</p>
+            </div>
+        </div>
+
+        <!-- 案件一覧 -->
+        <div class="mb-8">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-xl font-semibold">最近の案件</h3>
+                <button class="px-4 py-2 bg-blue-600 text-white hover:bg-blue-700 rounded-md">+ 新規案件</button>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow cursor-pointer">
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="text-lg font-semibold text-gray-900">AIチャットボット開発</h4>
+                        <span class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-800">進行中</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-3">OpenAI APIを使用したカスタマーサポート用チャットボット</p>
+                    <div class="flex flex-wrap gap-1 mb-3">
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded">React</span>
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded">TypeScript</span>
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded">OpenAI</span>
+                    </div>
+                    <div class="text-xs text-gray-500">クライアント: ABC株式会社</div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow cursor-pointer">
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="text-lg font-semibold text-gray-900">ECサイト構築</h4>
+                        <span class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-800">進行中</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-3">Next.jsを使用したモダンなECサイト</p>
+                    <div class="flex flex-wrap gap-1 mb-3">
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded">Next.js</span>
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded">Stripe</span>
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded">PostgreSQL</span>
+                    </div>
+                    <div class="text-xs text-gray-500">クライアント: XYZ商事</div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow cursor-pointer">
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="text-lg font-semibold text-gray-900">社内管理システム</h4>
+                        <span class="px-2 py-1 text-xs rounded-full bg-yellow-100 text-yellow-800">計画中</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-3">従業員管理・勤怠管理システム</p>
+                    <div class="flex flex-wrap gap-1 mb-3">
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded">FastAPI</span>
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded">Python</span>
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded">React</span>
+                    </div>
+                    <div class="text-xs text-gray-500">クライアント: DEF工業</div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow cursor-pointer">
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="text-lg font-semibold text-gray-900">モバイルアプリ開発</h4>
+                        <span class="px-2 py-1 text-xs rounded-full bg-purple-100 text-purple-800">完了</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-3">React Nativeを使用したフィットネスアプリ</p>
+                    <div class="flex flex-wrap gap-1 mb-3">
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded">React Native</span>
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded">Firebase</span>
+                    </div>
+                    <div class="text-xs text-gray-500">クライアント: FitLife Inc.</div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow cursor-pointer">
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="text-lg font-semibold text-gray-900">データ分析ダッシュボード</h4>
+                        <span class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-800">進行中</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-3">売上・在庫データの可視化</p>
+                    <div class="flex flex-wrap gap-1 mb-3">
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded">Python</span>
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded">Recharts</span>
+                    </div>
+                    <div class="text-xs text-gray-500">クライアント: DataCorp</div>
+                </div>
+
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow cursor-pointer">
+                    <div class="flex justify-between items-start mb-3">
+                        <h4 class="text-lg font-semibold text-gray-900">REST API開発</h4>
+                        <span class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-800">進行中</span>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-3">RESTful API設計・実装</p>
+                    <div class="flex flex-wrap gap-1 mb-3">
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded">FastAPI</span>
+                        <span class="px-2 py-1 text-xs bg-gray-100 text-gray-700 rounded">JWT</span>
+                    </div>
+                    <div class="text-xs text-gray-500">クライアント: TechStart</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 技術情報 -->
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h3 class="text-lg font-semibold mb-4">📊 実装済み技術スタック</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <h4 class="font-medium text-gray-900 mb-2">🔧 バックエンド（FastAPI + Python）</h4>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>✅ FastAPIアプリケーション</li>
+                        <li>✅ JWT認証（ユーザー登録・ログイン）</li>
+                        <li>✅ 案件CRUD API（6エンドポイント）</li>
+                        <li>✅ タスクCRUD API（6エンドポイント）</li>
+                        <li>✅ PostgreSQL対応データベースモデル</li>
+                        <li>✅ Pydanticバリデーション</li>
+                        <li>✅ Alembicマイグレーション</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-medium text-gray-900 mb-2">🎨 フロントエンド（React + TypeScript）</h4>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>✅ React 18 + TypeScript</li>
+                        <li>✅ Tailwind CSS</li>
+                        <li>✅ React Router（認証保護ルート）</li>
+                        <li>✅ TanStack Query（サーバー状態管理）</li>
+                        <li>✅ Zustand（クライアント状態管理）</li>
+                        <li>✅ React Hook Form + Zod</li>
+                        <li>✅ Axios（API通信）</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                <p class="text-sm text-blue-800">
+                    <strong>📝 合計実装量:</strong> 55+ファイル、3,300+行のコード<br>
+                    <strong>🎯 用途:</strong> AIプロジェクトマネージャー案件への応募用ポートフォリオ
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-white border-t mt-8">
+        <div class="max-w-7xl mx-auto px-4 py-6 text-center text-sm text-gray-600">
+            <p>Project Management System - Python（FastAPI）+ React（TypeScript）フルスタック作品</p>
+            <p class="mt-1">開発者: Cursor + Claude AI共同開発 | 2026年2月</p>
+        </div>
+    </footer>
+</body>
+</html>
